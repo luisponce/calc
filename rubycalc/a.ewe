@@ -1,0 +1,36 @@
+start:
+one:=1
+two:=2
+sp:=6
+#Start NegateNode
+sp:=sp+one
+#Start NegateNode
+sp:=sp+one
+#Start NumNode
+tmp:=1
+M[sp+0]:=tmp
+#End NumNode
+sp:=sp-one
+tmp:=0
+tmp:=tmp-one
+tmp2:=M[sp+1]
+tmp:=tmp*tmp2
+M[sp+0]:=tmp
+#End NegateNode
+sp:=sp-one
+tmp:=0
+tmp:=tmp-one
+tmp2:=M[sp+1]
+tmp:=tmp*tmp2
+M[sp+0]:=tmp
+#End NegateNode
+tmp:=M[sp+0]
+writeInt(tmp)
+end: halt
+equ one M[0]
+equ two M [1]
+equ tmp M[2]
+equ tmp2 M [3]
+equ sp M[4]
+equ store M[5]
+equ stack M[6]
